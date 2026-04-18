@@ -291,9 +291,14 @@ html, body {
     overflow-x: hidden;
 }
 
-/* حل مشكلة الفراغات الجانبية في المواقع العربية */
 body {
     overflow-x: hidden !important;
+    margin: 0; /* عشان نمسح أي فراغات بيضاء افتراضية حوالين الموقع */
+    
+    /* الأكواد الجديدة دي عشان تفرد الصفحة بالطول */
+    min-height: 100vh; /* بنجبر الصفحة إن طولها ميكنش أقل من طول الشاشة */
+    display: flex;
+    flex-direction: column;
 }
 
 footer {
@@ -303,9 +308,11 @@ footer {
     box-sizing: border-box !important;
     padding: 40px 20px;
     
-    /* تظبيط الكلام جوه الفوتر عشان يفضل في النص */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
+    /* السطر السحري ده هو اللي هيزق الفوتر لآخر الشاشة تحت لو الصفحة فاضية */
+    margin-top: auto !important; 
 }
