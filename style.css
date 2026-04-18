@@ -286,10 +286,3 @@ nav a.switch-link {
         transform: translateY(-2px);
     }
 }
-footer {
-    width: 100vw; /* بتجبر الفوتر إنه ياخد 100% من عرض الشاشة الحقيقي */
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    box-sizing: border-box;
-}
