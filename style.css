@@ -291,16 +291,21 @@ html, body {
     overflow-x: hidden;
 }
 
-/* تظبيط مقاس الفوتر */
+/* حل مشكلة الفراغات الجانبية في المواقع العربية */
+body {
+    overflow-x: hidden !important;
+}
+
 footer {
     width: 100vw !important;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    box-sizing: border-box;
-    /* الجزء ده مهم عشان يلم الكلام اللي جوه الفوتر ميفردش للآخر */
+    margin-right: calc(50% - 50vw) !important;
+    margin-left: calc(50% - 50vw) !important;
+    box-sizing: border-box !important;
     padding: 40px 20px;
+    
+    /* تظبيط الكلام جوه الفوتر عشان يفضل في النص */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
